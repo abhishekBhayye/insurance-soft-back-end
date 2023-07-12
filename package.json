@@ -25,6 +25,7 @@
     "firebase-admin": "^11.9.0",
     "mongodb": "^5.6.0",
     "mongoose": "^6.10.0",
+    "netlify-lambda": "^2.0.16",
     "nodemon": "^2.0.22",
     "serverless-http": "^3.2.0"
   }
