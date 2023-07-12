@@ -27,7 +27,10 @@ app.get('/', (req,res) => {
 // Connect to db
 mongoose.connect(process.env.DB_CONNECTION,
     { useNewUrlParser: true, useUnifiedTopology: true },
-    () => console.log('Connect to DB!')
+    () => {
+        console.log('Connect to DB!');
+        mongoose.connection.close();
+    }
 );
 
 // How to start listening to the server
