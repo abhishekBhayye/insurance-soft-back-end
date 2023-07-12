@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-import serverless from 'serverless-http';
 const cors = require('cors');
 require('dotenv/config');
 
@@ -26,7 +25,5 @@ mongoose.connect(process.env.DB_CONNECTION,
     () => console.log('Connect to DB!')
 );
 
-export const handler = serverless(api);
-
 // How to start listening to the server
-// app.listen(3000);
+app.listen(3000);
