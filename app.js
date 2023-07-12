@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const serverless = require('serverless-http');
 const cors = require('cors');
 const router = express.Router();
 
