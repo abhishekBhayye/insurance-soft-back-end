@@ -23,16 +23,14 @@ app.get('/', (req,res) => {
 })
 
 // Connect to db
-// mongoose.connect(process.env.DB_CONNECTION,
-//     { useNewUrlParser: true, useUnifiedTopology: true },
-//     () => {
-//         console.log('Connect to DB!');
-//         mongoose.connection.close();
-//     }
-// );
+mongoose.connect(process.env.DB_CONNECTION,
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    () => {
+        console.log('Connect to DB!');
+    }
+);
 
 // How to start listening to the server
 // app.listen(3000);
 
-module.exports = app;
-module.exports.handler = serverless(app);
+app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
