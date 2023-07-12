@@ -17,8 +17,6 @@ app.use(bodyParser.json());
 const departmentInfoRoute = require('./routes/CustomerRoute');
 app.use('/customers', departmentInfoRoute);
 
-app.use('/.netlify/functions/server', router);
-
 // ROUTE
 app.get('/', (req,res) => {
     res.send('We are home');

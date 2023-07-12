@@ -14,7 +14,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Import Routes
-const departmentInfoRoute = require('./routes/CustomerRoute');
+const departmentInfoRoute = require('../routes/CustomerRoute');
 app.use('/customers', departmentInfoRoute);
 
 app.use('/.netlify/functions/server', router);
