@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const serverless = require('serverless-http');
 const cors = require('cors');
@@ -8,6 +7,8 @@ const router = express.Router();
 require('dotenv/config');
 
 const app = express();
+
+const PORT = process.env.PORT || 3000;
 
 // Middlewares
 app.use(cors());
@@ -22,15 +23,10 @@ app.get('/', (req,res) => {
     res.send('We are home');
 })
 
-// Connect to db
-mongoose.connect(process.env.DB_CONNECTION,
-    { useNewUrlParser: true, useUnifiedTopology: true },
-    () => {
-        console.log('Connect to DB!');
-    }
-);
+// start the Express server
+app.listen(PORT, () => {
+    console.log(`Server is running on port: ${PORT}`);
+  });
 
 // How to start listening to the server
 // app.listen(3000);
-
-app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));

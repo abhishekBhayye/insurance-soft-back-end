@@ -1,6 +1,8 @@
 const customer = require('../models/customers');
+const db = require('../db/insuranceDb');
 
-const viewAll = (req, res) => {
+const viewAll = async (req, res) => {
+    await db.dbConnection();
     customer.find()
     .then((response) => {
         res.json(response)
@@ -9,6 +11,9 @@ const viewAll = (req, res) => {
         res.json({
             message: error
         })
+    })
+    .finally(() => {
+        db.closeDbConnection();
     })
 }
 
