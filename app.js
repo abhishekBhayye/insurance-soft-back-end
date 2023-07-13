@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const router = express.Router();
+const mongoose = require("mongoose");
 
 require('dotenv/config');
 
@@ -21,6 +22,11 @@ app.use('/customers', departmentInfoRoute);
 app.get('/', (req,res) => {
     res.send('We are home');
 })
+
+mongoose.connect(process.env.DB_CONNECTION,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => {}
+);
 
 // start the Express server
 app.listen(PORT, () => {
