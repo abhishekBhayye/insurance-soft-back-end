@@ -1,8 +1,20 @@
 {
   "name": "insurance-soft-back-end",
   "packageManager": "yarn@3.6.1",
+  "version": "1.0.0",
+  "description": "Express Hello World on Render",
+  "main": "app.js",
+  "repository": "https://github.com/abhishekBhayye/insurance-soft-back-end",
+  "author": "Abhishek",
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "start": "node app.js"
-    // "prod": "NODE_ENV=production webpack -p --config webpack.config.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
