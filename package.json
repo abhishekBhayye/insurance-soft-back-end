@@ -7,7 +7,6 @@
   "repository": "https://github.com/abhishekBhayye/insurance-soft-back-end",
   "author": "Abhishek",
   "license": "MIT",
-  "private": false,
   "scripts": {
     "start": "node app.js"
   },
