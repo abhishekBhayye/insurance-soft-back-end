@@ -1,32 +1,20 @@
 {
-  "name": "insurance-soft",
+  "name": "insurance-soft-back-end",
+  "packageManager": "yarn@3.6.1",
   "version": "1.0.0",
-  "description": "Back end for the insurance software",
+  "description": "Express Hello World on Render",
   "main": "app.js",
+  "repository": "https://github.com/abhishekBhayye/insurance-soft-back-end",
+  "author": "Abhishek",
+  "license": "MIT",
+  "private": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "build": "netlify-lambda build express"
+    "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/abhishekBhayye/insurance-soft-back-end.git"
-  },
-  "author": "abhishek",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/abhishekBhayye/insurance-soft-back-end/issues"
-  },
-  "homepage": "https://github.com/abhishekBhayye/insurance-soft-back-end#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "firebase-admin": "^11.9.0",
-    "mongodb": "^5.6.0",
-    "mongoose": "^6.10.0",
-    "netlify-lambda": "^2.0.16",
-    "nodemon": "^2.0.22",
-    "serverless-http": "^3.2.0"
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
