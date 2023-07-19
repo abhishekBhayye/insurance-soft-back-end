@@ -9,4 +9,8 @@ router.get('/', customerController.viewAll);
 
 router.post('/', customerController.createCustomer);
 
+router.put('/', customerController.updateCustomer);
+
+router.delete('/', customerController.deleteCustomer);
+
 module.exports = router;
