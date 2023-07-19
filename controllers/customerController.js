@@ -25,6 +25,30 @@ const createCustomer = (req, res) => {
     })
 }
 
+const updateCustomer = (req, res) => {
+    customer.updateOne(req.body)
+    .then((response) => {
+        res.json(response)
+    })
+    .catch((error) => {
+        res.json({
+            message: error
+        })
+    })
+}
+
+const deleteCustomer = (req, res) => {
+    customer.deleteOne(req.body)
+    .then((response) => {
+        res.json(response)
+    })
+    .catch((error) => {
+        res.json({
+            message: error
+        })
+    })
+}
+
 module.exports = {
-    viewAll, createCustomer
+    viewAll, createCustomer, updateCustomer, deleteCustomer
 }
