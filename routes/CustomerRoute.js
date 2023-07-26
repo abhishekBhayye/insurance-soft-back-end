@@ -7,6 +7,8 @@ const customerController = require('../controllers/customerController');
 // GET BACK ALL THE POSTS
 router.get('/', customerController.viewAll);
 
+router.get('/:id', customerController.viewCustomer);
+
 router.post('/', customerController.createCustomer);
 
 router.put('/', customerController.updateCustomer);
