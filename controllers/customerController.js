@@ -14,9 +14,10 @@ const viewAll = async (req, res) => {
     })
 }
 
-const viewCustomer = async (req, res) => {
-    customer.findOne({ _id: req.params.id })
+const viewCustomer = (req, res) => {
+    customer.findById(req.params.id)
     .then((response) => {
+        res.json(response)
     })
     .catch((error) => {
         res.json({
