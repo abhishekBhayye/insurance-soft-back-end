@@ -1,7 +1,14 @@
 const mongoose = require('mongoose');
 
 const customers = mongoose.Schema({
-    name: {
+    firstName: {
+        type: String,
+        required: true
+    },
+    middleName: {
+        type: String
+    },
+    lastName: {
         type: String,
         required: true
     },
@@ -9,11 +16,22 @@ const customers = mongoose.Schema({
         type: String,
         required: true
     },
-    address: {
+    addressLine1: {
         type: String,
         required: true
     },
-    date_of_reg: {
+    addressLine2: {
+        type: String
+    },
+    pinCode: {
+        type: Number,
+        required: true
+    },
+    city: {
+        type: String,
+        required: true
+    },
+    state: {
         type: String,
         required: true
     },
@@ -25,7 +43,18 @@ const customers = mongoose.Schema({
         type: String,
         required: true
     },
-    policy: {
+    policyType: {
+        type: String,
+        required: true
+    },
+    date_of_reg: {
+        type: String,
+        required: true
+    },
+    policyName: {
+        type: String,
+    },
+    policySchedule: {
         type: String,
         required: true
     }
